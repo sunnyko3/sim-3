@@ -18,6 +18,7 @@ class Auth extends Component {
             <div>Auth
                 <input/>
                 <input/>
+                <button>Login</button><button>Register</button>
             </div>
         )
     }

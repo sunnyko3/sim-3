@@ -4,12 +4,12 @@ require('dotenv').config()
 const massive = require('massive')
 const ctrl = require('./controller')
 const {SERVER_PORT, CONNECTION_STRING} = process.env
-
 const app = express()
+const authCtrl = require('./authCtrl')
+
 app.use(express.json())
 
-
-
+app.post('/api/signup', authCtrl.register)
 
 
 massive(CONNECTION_STRING).then(db => {
